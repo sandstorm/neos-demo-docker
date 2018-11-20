@@ -20,6 +20,7 @@ RUN apt-get -f install -y -q postgresql-contrib-9.6 postgresql-9.6 postgresql-cl
 RUN docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql
 RUN docker-php-ext-install pdo pdo_pgsql
 
+# Install gd PHP extension
 RUN apt-get install -y \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
@@ -66,5 +67,7 @@ COPY ./supervisord.conf /supervisord.conf
 
 ADD ./run_flow.sh /app/run_flow.sh
 ADD ./Settings.yaml /app/Configuration/Settings.yaml
+
+ADD ./memory.php.ini /usr/local/etc/php/conf.d
 
 CMD ["/usr/local/bin/supervisord", "-c", "/supervisord.conf"]
