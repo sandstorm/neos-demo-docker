@@ -1,0 +1,12 @@
+Neos:
+  Flow:
+    persistence:
+      # For a reference of the possible options, take a look at
+      # https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html
+      backendOptions:
+        driver: 'pdo_pgsql'
+        charset: 'utf8'
+        host: '127.0.0.1'
+        dbname: 'neos'       # adjust to your database name
+        user: 'neos'             # adjust to your database user
+        password: 'neos'         # adjust to your database password
