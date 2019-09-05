@@ -7,7 +7,7 @@ Try Neos by just starting this docker image. No configuration needed. Just downl
 Make sure [Docker](https://docs.docker.com/docker-for-mac/) is running and execute:
 
 ```sh
-docker run --rm -p 8081:8081 sandstormmedia/neos-demo:5.0.2
+docker run --rm -p 8081:8081 sandstormmedia/neos-demo:5.0.2-neos-4.3.4
 ```
 
 Wait for startup and just go to [127.0.0.1:8081](http://127.0.0.1:8081) for frontend and [127.0.0.1:8081/neos](http://127.0.0.1:8081/neos) for backend
