@@ -1,7 +1,5 @@
 Neos:
   Flow:
-    http:
-      baseUri: '%env:BASE_URI%'
     persistence:
       # For a reference of the possible options, take a look at
       # https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html

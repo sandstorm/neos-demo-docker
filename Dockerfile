@@ -69,7 +69,6 @@ COPY --from=ochinchina/supervisord:latest /usr/local/bin/supervisord /usr/local/
 COPY ./supervisord.conf /supervisord.conf
 
 ADD ./run_flow.sh /app/run_flow.sh
-ENV BASE_URI=http://127.0.0.1:8081/
 ADD ./Settings.yaml /app/Configuration/Settings.yaml
 
 ADD ./memory.php.ini /usr/local/etc/php/conf.d

@@ -17,4 +17,3 @@ You can login with `admin` and `password` in the backend.
 ## TODO
 
 - Currently the database and resources are not persistent!
-- Replace _BASE_URI by [Trusted Proxies](https://flowframework.readthedocs.io/en/stable/TheDefinitiveGuide/PartIII/Http.html#trusted-proxies)
