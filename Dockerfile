@@ -36,7 +36,8 @@ RUN curl -s https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
 
 # Create latest demo
-RUN composer create-project --no-dev neos/neos-base-distribution .
+RUN composer create-project --no-dev neos/neos-base-distribution . \
+    && composer require "neos/flow:5.3.2"
 
 # Clean up
 RUN rm -rf /root/.composer/
