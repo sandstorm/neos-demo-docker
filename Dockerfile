@@ -46,9 +46,9 @@ ENV PGDATA /var/lib/postgresql/data
 VOLUME /var/lib/postgresql/data
 
 # Setting up postgresql
-# And add ``listen_addresses`` to ``/etc/postgresql/9.6/main/postgresql.conf``
-RUN mkdir -p /etc/postgresql/9.6/main/
-RUN echo "listen_addresses='*'" >> /etc/postgresql/9.6/main/postgresql.conf
+# And add ``listen_addresses`` to ``/etc/postgresql/11/main/postgresql.conf``
+RUN mkdir -p /etc/postgresql/11/main/
+RUN echo "listen_addresses='*'" >> /etc/postgresql/11/main/postgresql.conf
 
 RUN ./flow core:setfilepermissions postgres postgres postgres
 
