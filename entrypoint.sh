@@ -3,6 +3,26 @@
 set -ex
 
 echo "Preparing Neos ..."
+
+if [ ! -z "$CUSTOM_DISTRIBUTION" ]
+then
+    echo "Installing custom distribution $CUSTOM_DISTRIBUTION..."
+    rm -Rf /app/* /app/.??*
+
+    composer create-project --no-dev $CUSTOM_DISTRIBUTION /app
+    cd /app
+    composer require "jcupitt/vips"
+    composer require "rokka/imagine-vips"
+fi
+
+if [ ! -z "$FORCE_VERSIONS" ]
+then
+    cd /app
+    cat composer.json
+    composer require $FORCE_VERSIONS
+fi
+
+
 cd /app
 
 # start postgres

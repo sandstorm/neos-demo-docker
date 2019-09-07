@@ -17,6 +17,8 @@ You can login with `admin` and `password` in the backend.
 ADMIN_USER
 ADMIN_PASSWORD
 
+CUSTOM_DISTRIBUTION = neos/neos-development-distribution:4.2.x-dev
+FORCE_VERSIONS=neos/flow:5.3.2 neos/neos:4.3.0 neos/media-browser:4.3.0 neos/nodetypes:4.3.0 neos/nodetypes-form:4.3.0 neos/nodetypes-navigation:4.3.0 neos/nodetypes-html:4.3.0 neos/nodetypes-contentreferences:4.3.0 neos/nodetypes-columnlayouts:4.3.0 neos/nodetypes-assetlist:4.3.0 neos/nodetypes-basemixins:4.3.0 neos/fusion:4.3.0 neos/content-repository:4.3.0 neos/site-kickstarter:4.3.0 neos/media:4.3.0
 
 
 ## TODO
@@ -29,4 +31,11 @@ ADMIN_PASSWORD
 ```
 docker build -t neos-demo-docker .
 docker run --rm -it --entrypoint /bin/bash neos-demo-docker
+```
+
+## Deployment
+
+```
+docker build -t sandstormmedia/neos-demo:5.1.0-neos-4.3.4 .
+docker push sandstormmedia/neos-demo:5.1.0-neos-4.3.4
 ```
