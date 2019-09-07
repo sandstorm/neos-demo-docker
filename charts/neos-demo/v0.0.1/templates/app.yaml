@@ -1,0 +1,13 @@
+apiVersion: k8s.sandstorm.de/v1alpha1
+kind: OneContainerOnePort
+metadata:
+  name: {{ .Release.Name }}}
+spec:
+  description: |
+    Small non-persistent installation of the Neos Demo Package.
+  hostNames:
+    {{ .Values.hostNamePrefix }}.cloud.sandstorm.de: []
+  image: sandstormmedia/neos-demo:5.1.0-neos-4.3.4
+  node: worker2
+  port: 8081
+  stagingCertificates: false

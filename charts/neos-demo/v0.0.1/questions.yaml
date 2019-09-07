@@ -1,0 +1,12 @@
+categories:
+  - Neos
+
+questions:
+  - variable: hostNamePrefix
+    label: "Host-Präfix (...cloud.sandstorm.de)"
+    description: "Host-Präfix, wo die Demo-Instanz gehostet werden soll (also der URL-Teil vor cloud.sandstorn.de)"
+    required: true
+    default: "neos-demo-xyz"
+    type: string
+
+    group: "Server Settings"

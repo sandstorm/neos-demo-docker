@@ -1,0 +1,4 @@
+apiVersion: v1
+name: Neos Demo Site (without persistence)
+description: Neos Demo Site, completely selfcontained, NOT for production usage!
+version: 0.0.1
