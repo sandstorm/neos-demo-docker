@@ -14,6 +14,19 @@ Wait for startup and just go to [127.0.0.1:8081](http://127.0.0.1:8081) for fron
 
 You can login with `admin` and `password` in the backend.
 
+ADMIN_USER
+ADMIN_PASSWORD
+
+
+
 ## TODO
 
 - Currently the database and resources are not persistent!
+
+
+## Developing
+
+```
+docker build -t neos-demo-docker .
+docker run --rm -it --entrypoint /bin/bash neos-demo-docker
+```

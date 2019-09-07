@@ -10,3 +10,15 @@ Neos:
         dbname: 'neos'       # adjust to your database name
         user: 'neos'             # adjust to your database user
         password: 'neos'         # adjust to your database password
+
+  Imagine:
+    driver: 'Vips'
+    enabledDrivers:
+      Vips: true
+      Gd: true
+      Imagick: true
+  Media:
+    image:
+      defaultOptions:
+        # The Vips driver does not support interlace
+        interlace: ~
